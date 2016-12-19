@@ -1,9 +1,8 @@
 {
-  "name": "Google Authentication",
   "description": {
-    "en": "Google Authentication Driver",
-    "ru": "Драйвер аутентификации Google",
-    "uk": "Драйвер автентифікации Google"
+    "en": "Google Sign In Authentication Driver",
+    "ru": "Драйвер аутентификации Google Sign In",
+    "uk": "Драйвер автентифікации Google Sign In"
   },
   "url": "https://github.com/pytsite/plugin-auth_google",
   "author": {
