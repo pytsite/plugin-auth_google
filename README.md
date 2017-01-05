@@ -1,9 +1,13 @@
-# PytSite Google Sign In Authentication Driver Plugin
+# PytSite Google Sign In Plugin
 
 Authentication via [Google Sign In](https://developers.google.com/identity/sign-in/web/).
 
 
 ## Changelog
+
+### 0.1.3 (2017-01-05)
+Translations fixed.
+
 
 ### 0.1.2 (2016-12-19)
 plugin.json updated.

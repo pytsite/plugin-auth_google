@@ -12,7 +12,7 @@ def _init():
 
     # Resources
     lang.register_package(__name__, alias='auth_google')
-    lang.register_global('auth_google_admin_settings_url', lambda: settings.form_url('auth_google'))
+    lang.register_global('auth_google_admin_settings_url', lambda language, args: settings.form_url('auth_google'))
     assetman.register_package(__name__, alias='auth_google')
 
     # Permissions

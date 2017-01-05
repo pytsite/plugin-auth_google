@@ -1,8 +1,8 @@
 {
   "description": {
-    "en": "Google Sign In Authentication Driver",
-    "ru": "Драйвер аутентификации Google Sign In",
-    "uk": "Драйвер автентифікации Google Sign In"
+    "en": "Google Sign In",
+    "ru": "Google Sign In",
+    "uk": "Google Sign In"
   },
   "url": "https://github.com/pytsite/plugin-auth_google",
   "author": {
