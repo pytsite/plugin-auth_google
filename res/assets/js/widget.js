@@ -3,7 +3,7 @@
  */
 $(window).on('pytsite.widget.init:plugins.auth_google._driver._SignInWidget', function (e, widget) {
     function onAuthGoogleSignIn(user) {
-        var form = $('#pytsite-auth-sign-in').first();
+        var form = $('.pytsite-auth-sign-in.driver-google');
         form.find('input[id$="id-token"]').val(user.getAuthResponse().id_token);
         form.submit();
     }
