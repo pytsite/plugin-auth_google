@@ -28,9 +28,9 @@ class _SignInWidget(_widget.Abstract):
 
 
 class _SignInForm(_form.Form):
-    def __init__(self, uid: str, **kwargs):
+    def __init__(self, **kwargs):
         self._client_id = kwargs.get('client_id')
-        super().__init__(uid, **kwargs)
+        super().__init__(**kwargs)
 
     def _on_setup_widgets(self):
         self.add_widget(_widget.input.Hidden(self.uid + '-id-token', form_area='hidden'))
@@ -52,17 +52,17 @@ class Google(_auth.driver.Authentication):
         """
         return 'google'
 
-    def get_sign_up_form(self, form_uid: str, **kwargs) -> _form.Form:
+    def get_sign_up_form(self, **kwargs) -> _form.Form:
         """Get sign in form.
         """
-        return self.get_sign_in_form(form_uid, **kwargs)
+        return self.get_sign_in_form(**kwargs)
 
-    def get_sign_in_form(self, form_uid: str, **kwargs) -> _form.Form:
+    def get_sign_in_form(self, **kwargs) -> _form.Form:
         """Get sign in form.
         """
         _metatag.t_set('google-signin-client_id', self._client_id)
 
-        return _SignInForm(form_uid, client_id=self._client_id, **kwargs)
+        return _SignInForm(client_id=self._client_id, **kwargs)
 
     def sign_in(self, data: dict) -> _auth.model.AbstractUser:
         """Authenticate user.

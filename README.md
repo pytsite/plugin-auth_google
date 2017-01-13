@@ -5,6 +5,10 @@
 
 ## Changelog
 
+### 0.1.5 (2017-01-13)
+Support for latest PytSite `form`'s changes.
+
+
 ### 0.1.4 (2017-01-12)
 Support for latest PytSite `form`'s changes.
 
