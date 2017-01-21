@@ -23,7 +23,7 @@ class _SignInWidget(_widget.Abstract):
             'auth_google@js/widget.js',
         ])
 
-    def get_html_em(self, **kwargs) -> _html.Element:
+    def _get_element(self, **kwargs) -> _html.Element:
         return _html.Div(uid=self.uid, cls='button-container')
 
 

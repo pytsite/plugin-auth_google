@@ -5,6 +5,10 @@
 
 ## Changelog
 
+### 0.1.6 (2017-01-21)
+Support latest PytSite `widget`'s changes. 
+
+
 ### 0.1.5 (2017-01-13)
 Support for latest PytSite `form`'s changes.
 
