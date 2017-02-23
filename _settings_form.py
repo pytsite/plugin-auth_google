@@ -1,6 +1,6 @@
 """PytSite AddThis Plugin Settings Form.
 """
-from pytsite import widget as _widget, lang as _lang, settings as _settings
+from pytsite import widget as _widget, lang as _lang, settings as _settings, reload as _reload
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
@@ -20,3 +20,8 @@ class Form(_settings.Form):
         ))
 
         super()._on_setup_widgets()
+
+    def _on_submit(self):
+        _reload.set_flag()
+
+        return super()._on_submit()

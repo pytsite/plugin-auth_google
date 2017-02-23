@@ -1,4 +1,4 @@
-"""PytSite Google Authentication Driver.
+"""PytSite Google Authentication Driver
 """
 
 __author__ = 'Alexander Shepetko'
