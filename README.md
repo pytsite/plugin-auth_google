@@ -5,12 +5,17 @@
 
 ## Changelog
 
+
+### 0.1.8 (2017-03-21)
+Support for latest PytSite `widget`'s changes.
+
+
 ### 0.1.7 (2017-02-23)
 Added notification about application reload necessity after setting form submit. 
 
 
 ### 0.1.6 (2017-01-21)
-Support latest PytSite `widget`'s changes. 
+Support for latest PytSite `widget`'s changes. 
 
 
 ### 0.1.5 (2017-01-13)

@@ -24,7 +24,7 @@ class _SignInWidget(_widget.Abstract):
         ])
 
     def _get_element(self, **kwargs) -> _html.Element:
-        return _html.Div(uid=self.uid, cls='button-container')
+        return _html.Div(uid=self.uid, css='button-container')
 
 
 class _SignInForm(_form.Form):
