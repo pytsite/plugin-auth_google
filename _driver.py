@@ -1,8 +1,8 @@
-"""PytSite Auth Google Driver.
+"""PytSite Auth Google Driver
 """
 import requests as _requests
-from pytsite import auth as _auth, form as _form, widget as _widget, html as _html, settings as _settings, \
-    lang as _lang, metatag as _metatag, file as _file, reg as _reg
+from pytsite import auth as _auth, form as _form, widget as _widget, html as _html, lang as _lang, \
+    metatag as _metatag, file as _file, reg as _reg
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
@@ -10,6 +10,9 @@ __license__ = 'MIT'
 
 
 class _SignInWidget(_widget.Abstract):
+    """Google Sign In Widget
+    """
+
     def __init__(self, uid: str, **kwargs):
         """Init.
         """
@@ -28,9 +31,15 @@ class _SignInWidget(_widget.Abstract):
 
 
 class _SignInForm(_form.Form):
+    """Google Sign In Form
+    """
+
     def __init__(self, **kwargs):
+        """Init.
+        """
         self._client_id = kwargs.get('client_id')
         super().__init__(**kwargs)
+        self._nocache = True
 
     def _on_setup_widgets(self):
         self.add_widget(_widget.input.Hidden(self.uid + '-id-token', form_area='hidden'))
@@ -42,6 +51,8 @@ class _SignInForm(_form.Form):
 
 class Google(_auth.driver.Authentication):
     def __init__(self, client_id: str):
+        """Init.
+        """
         self._client_id = client_id
         if not self._client_id:
             raise RuntimeError("You should set configuration parameter 'auth.google.client_id'. " +
@@ -76,7 +87,7 @@ class Google(_auth.driver.Authentication):
                     break
 
         if not token:
-            raise ValueError("No ID token received.")
+            raise ValueError("No ID token received")
 
         response = _requests.get('https://www.googleapis.com/oauth2/v3/tokeninfo', params={
             'id_token': token,
@@ -91,7 +102,7 @@ class Google(_auth.driver.Authentication):
 
         # Check email validness
         if google_data['email_verified'] != 'true':
-            raise _auth.error.AuthenticationError("Email '{}' is not verified by Google.".format(google_data['email']))
+            raise _auth.error.AuthenticationError("Email '{}' is not verified by Google".format(google_data['email']))
 
         # Try to load user
         try:

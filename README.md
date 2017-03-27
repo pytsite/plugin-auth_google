@@ -6,6 +6,10 @@
 ## Changelog
 
 
+### 0.1.9 (2017-03-27)
+Disabled sign-in form caching. 
+
+
 ### 0.1.8 (2017-03-21)
 Support for latest PytSite `widget`'s changes.
 
