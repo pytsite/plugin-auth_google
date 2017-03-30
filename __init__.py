@@ -7,7 +7,7 @@ __license__ = 'MIT'
 
 
 def _init():
-    from pytsite import auth, lang, assetman, settings, events, permissions
+    from pytsite import auth, lang, assetman, settings, permissions, router
     from . import _driver, _settings_form, _eh
 
     # Resources
@@ -23,7 +23,7 @@ def _init():
                     'auth_google.settings.manage')
 
     # Event handlers
-    events.listen('pytsite.router.dispatch', _eh.router_dispatch)
+    router.on_dispatch(_eh.router_dispatch)
 
     # Authentication driver
     client_id = settings.get('auth_google.client_id')
