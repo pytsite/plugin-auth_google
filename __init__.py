@@ -13,7 +13,11 @@ def _init():
     # Resources
     lang.register_package(__name__, alias='auth_google')
     lang.register_global('auth_google_admin_settings_url', lambda language, args: settings.form_url('auth_google'))
+
     assetman.register_package(__name__, alias='auth_google')
+    assetman.t_less(__name__ + '@css/**', 'css')
+    assetman.t_js(__name__ + '@js/**', 'js')
+    assetman.js_module('auth-google-widget', __name__ + '@js/auth-google-widget')
 
     # Permissions
     permissions.define_permission('auth_google.settings.manage', 'auth_google@manage_auth_google_settings', 'app')

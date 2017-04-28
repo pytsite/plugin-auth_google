@@ -6,6 +6,10 @@
 ## Changelog
 
 
+### 0.1.11 (2017-04-28)
+Support for latest PytSite asset management changes.
+
+
 ### 0.1.10 (2017-03-30)
 Fixed notifications. 
 
