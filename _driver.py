@@ -2,7 +2,7 @@
 """
 import requests as _requests
 from pytsite import auth as _auth, form as _form, widget as _widget, html as _html, lang as _lang, \
-    metatag as _metatag, file as _file, reg as _reg
+    metatag as _metatag, file as _file, settings as _settings
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
@@ -107,7 +107,7 @@ class Google(_auth.driver.Authentication):
 
         except _auth.error.UserNotExist:
             # Try to create new user
-            if not _reg.get('auth.signup.enabled'):
+            if not _settings.get('auth.signup_enabled'):
                 raise _auth.error.AuthenticationError(_lang.t('auth_google@signup_is_disabled'))
             else:
                 # New users can be created only by system user

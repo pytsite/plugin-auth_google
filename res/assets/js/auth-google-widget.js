@@ -1,7 +1,7 @@
 /**
  * While writing code for this widget, refer to https://developers.google.com/identity/sign-in/web/reference
  */
-define(['jquery', 'assetman', 'pytsite-auth'], function ($, assetman, pytsiteAuth) {
+define(['jquery', 'assetman', 'pytsite-auth-http-api'], function ($, assetman, pytsiteAuth) {
     return function (widget) {
         function onAuthGoogleSignIn(user) {
             var form = $('.pytsite-auth-sign-in.driver-google');
