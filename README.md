@@ -6,6 +6,10 @@
 ## Changelog
 
 
+### 0.2 (2017-07-29)
+Changed to support for new `google` plugin.
+
+
 ### 0.1.12 (2017-07-03)
 Support for latest PytSite-1.0 release.
 

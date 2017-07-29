@@ -12,6 +12,6 @@
   },
   "requires": {
     "packages": [],
-    "plugins": []
+    "plugins": ["google"]
   }
 }

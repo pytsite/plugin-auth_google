@@ -1,6 +1,1 @@
-google_authentication: 'Google Sign In'
 signup_is_disabled: 'Регистрация новых пользователей отключена'
-client_id: 'Client ID'
-plugin_setup_required_warning: 'Необходимо <a href="{:auth_google_admin_settings_url}">настроить плагин Google Sign In</a>'
-client_id_setup_help: 'Получите <a target="_blank" href="https://developers.google.com/identity/sign-in/web/devconsole-project">Client ID</a> и скопируйте его в это поле'
-manage_auth_google_settings: 'Управление настройками Google Sign In'

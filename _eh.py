@@ -1,6 +1,6 @@
-"""PytSite Auth Google Plugin Event Handlers.
+"""PytSite Google Auth Driver Plugin Event Handlers
 """
-from pytsite import settings as _settings, auth as _auth, lang as _lang, router as _router
+from pytsite import metatag as _metatag, settings as _settings
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
@@ -10,6 +10,5 @@ __license__ = 'MIT'
 def router_dispatch():
     """pytsite.router.dispatch
     """
-    c_user = _auth.get_current_user()
-    if not _settings.get('auth_google.client_id') and c_user.has_permission('auth_google.settings.manage'):
-        _router.session().add_warning_message(_lang.t('auth_google@plugin_setup_required_warning'))
+    if _settings.get('google.client_id'):
+        _metatag.t_set('google-signin-client_id', _settings.get('google.client_id'))

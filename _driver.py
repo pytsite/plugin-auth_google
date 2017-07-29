@@ -59,6 +59,11 @@ class Google(_auth.driver.Authentication):
         """
         return 'google'
 
+    def get_description(self) -> str:
+        """Get description of the driver
+        """
+        return 'Google'
+
     def get_sign_up_form(self, **kwargs) -> _form.Form:
         """Get sign in form.
         """
