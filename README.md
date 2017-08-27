@@ -6,6 +6,10 @@
 ## Changelog
 
 
+### 0.2.1 (2017-08-27)
+`plugin.json` updated.
+
+
 ### 0.2 (2017-07-29)
 Changed to support for new `google` plugin.
 

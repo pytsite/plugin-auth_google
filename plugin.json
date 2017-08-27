@@ -1,4 +1,6 @@
 {
+  "name": "plugins.auth_google",
+  "version": "0.2.1",
   "description": {
     "en": "Google Sign In",
     "ru": "Google Sign In",
@@ -12,6 +14,8 @@
   },
   "requires": {
     "packages": [],
-    "plugins": ["google"]
+    "plugins": [
+      "google"
+    ]
   }
 }
