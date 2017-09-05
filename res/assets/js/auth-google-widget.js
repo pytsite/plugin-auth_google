@@ -2,6 +2,8 @@
  * While writing code for this widget, refer to https://developers.google.com/identity/sign-in/web/reference
  */
 define(['jquery', 'assetman', 'pytsite-auth-http-api', 'pytsite-google'], function ($, assetman, pytsiteAuth, google) {
+    assetman.loadCSS('plugins.auth_google@css/auth-google-widget.css');
+
     return function (widget) {
         google.ready(function (gapi) {
             gapi.load('auth2', function () {
@@ -27,8 +29,5 @@ define(['jquery', 'assetman', 'pytsite-auth-http-api', 'pytsite-google'], functi
                 });
             });
         });
-
-
-        assetman.loadCSS('plugins.auth_google@css/auth-google-widget.css');
     }
 });

@@ -6,6 +6,10 @@
 ## Changelog
 
 
+### 0.3 (2017-09-06)
+Moved main part of code from plugin `google`.
+
+
 ### 0.2.1 (2017-08-27)
 `plugin.json` updated.
 

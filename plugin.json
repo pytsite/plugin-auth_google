@@ -1,10 +1,10 @@
 {
-  "name": "plugins.auth_google",
-  "version": "0.2.1",
+  "name": "auth_google",
+  "version": "0.3",
   "description": {
-    "en": "Google Sign In",
-    "ru": "Google Sign In",
-    "uk": "Google Sign In"
+    "en": "Google Sign In Authentication Driver",
+    "ru": "Драйвер аутентификации Google Sign In",
+    "uk": "Драйвер аутентифікації Google Sign In"
   },
   "url": "https://github.com/pytsite/plugin-auth_google",
   "author": {
@@ -15,7 +15,7 @@
   "requires": {
     "packages": [],
     "plugins": [
-      "google"
+      "google>=0.2"
     ]
   }
 }
