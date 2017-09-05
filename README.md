@@ -6,6 +6,10 @@
 ## Changelog
 
 
+### 0.3.1 (2017-09-06)
+Fixed package requirements.
+
+
 ### 0.3 (2017-09-06)
 Moved main part of code from plugin `google`.
 
