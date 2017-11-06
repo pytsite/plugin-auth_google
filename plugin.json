@@ -1,6 +1,6 @@
 {
   "name": "auth_google",
-  "version": "0.3.1",
+  "version": "0.4",
   "description": {
     "en": "Google Sign In Authentication Driver",
     "ru": "Драйвер аутентификации Google Sign In",

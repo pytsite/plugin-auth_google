@@ -10,8 +10,8 @@ define(['jquery', 'assetman', 'pytsite-auth-http-api', 'pytsite-google'], functi
                 gapi.auth2.init().then(function () {
                     var googleAuthInstance = gapi.auth2.getAuthInstance();
 
-                    pytsiteAuth.isAnonymous().done(function (isAnonymous) {
-                        if (isAnonymous) {
+                    pytsiteAuth.isAnonymous().done(function (r) {
+                        if (r['status']) {
                             // Sign out from Google and render "Sign In" button
                             googleAuthInstance.signOut();
                             gapi.signin2.render(widget.uid, {
@@ -23,7 +23,7 @@ define(['jquery', 'assetman', 'pytsite-auth-http-api', 'pytsite-google'], functi
                             });
                         }
                         else {
-                            console.log("Already authorized");
+                            console.log('Already authorized');
                         }
                     });
                 });

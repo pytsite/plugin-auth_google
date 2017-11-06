@@ -6,6 +6,10 @@
 ## Changelog
 
 
+### 0.4 (2017-11-06)
+Fixed to support latest PytSite release 5.6.
+
+
 ### 0.3.1 (2017-09-06)
 Fixed package requirements.
 
