@@ -1,7 +1,8 @@
-"""PytSite Auth Google Plugin Event Controllers
+"""PytSite Google Authentication Driver Plugin Controllers
 """
 from oauth2client.client import OAuth2WebServerFlow as _OAuth2WebServerFlow
-from pytsite import routing as _routing, router as _router, lang as _lang, auth as _auth
+from pytsite import routing as _routing, router as _router, lang as _lang
+from plugins import auth as _auth
 from . import _api
 
 __author__ = 'Alexander Shepetko'

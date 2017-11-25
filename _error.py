@@ -1,6 +1,6 @@
-"""PytSite Auth Google Plugin Errors
+"""PytSite Google Authentication Driver Plugin Errors
 """
-from pytsite import auth as _auth
+from plugins import auth as _auth
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'

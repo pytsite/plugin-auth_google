@@ -8,25 +8,26 @@ __license__ = 'MIT'
 
 
 def _init():
-    from pytsite import auth, lang, assetman, settings, router, permissions
+    from pytsite import lang, router
+    from plugins import assetman, permissions, auth, settings
     from . import _driver, _eh, _settings_form, _controllers
 
     # Language resources
-    lang.register_package(__name__, alias='auth_google')
+    lang.register_package(__name__)
     lang.register_global('auth_google_admin_settings_url', lambda language, args: settings.form_url('auth_google'))
 
     # Assets
-    assetman.register_package(__name__, alias='auth_google')
-    assetman.t_less(__name__ + '@css/**', 'css')
-    assetman.t_js(__name__ + '@js/**', 'js')
+    assetman.register_package(__name__)
+    assetman.t_less(__name__ + '@**')
+    assetman.t_js(__name__ + '@**')
     assetman.js_module('auth-google-widget', __name__ + '@js/auth-google-widget')
 
     # Permissions
-    permissions.define_permission('auth_google.settings.manage', 'auth_google@manage_auth_google_settings', 'app')
+    permissions.define_permission('auth_google@manage_settings', 'auth_google@manage_auth_google_settings', 'app')
 
     # Settings
     settings.define('auth_google', _settings_form.Form, 'auth_google@auth_google', 'fa fa-google',
-                    'auth_google.settings.manage')
+                    'auth_google@manage_settings')
 
     # Event handlers
     router.on_dispatch(_eh.router_dispatch)
@@ -38,7 +39,7 @@ def _init():
 
     # Routes
     router.handle(_controllers.Authorization(), '/auth_google/authorization', 'auth_google@authorization',
-                  filters='pytsite.auth_web@authorize')
+                  filters='auth_web@authorize')
 
 
 _init()

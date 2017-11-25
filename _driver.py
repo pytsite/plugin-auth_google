@@ -1,8 +1,8 @@
-"""PytSite Auth Google Driver
+"""PytSite Google Authentication Driver Plugin
 """
 import requests as _requests
-from pytsite import auth as _auth, form as _form, widget as _widget, html as _html, lang as _lang, \
-    metatag as _metatag, file as _file, settings as _settings
+from pytsite import html as _html, lang as _lang, metatag as _metatag
+from plugins import widget as _widget, form as _form, auth as _auth, settings as _settings, file as _file
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'

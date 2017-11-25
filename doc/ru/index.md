@@ -1,10 +1,10 @@
-# pytsite.auth_driver_google
+# auth_driver_google
 
 ## Описание
 Драйвер аутентификации [Google Sign In](https://developers.google.com/identity/sign-in/web/).
 
 ## Включение
-В параметр конфигурации `autoload` добавить значение `pytsite.auth_driver_google`.
+В параметр конфигурации `autoload` добавить значение `auth_driver_google`.
 
 ## Конфигурация
 * Required `auth.google.client_id: <str>`. ID клиента Google. 

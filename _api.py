@@ -1,8 +1,9 @@
-"""PytSite Google Auth Driver API
+"""PytSite Google Authentication Driver Plugin API
 """
 from typing import Union as _Union, List as _List
 from oauth2client import client as _oauth2_client
-from pytsite import auth as _auth, settings as _settings, router as _router
+from pytsite import router as _router
+from plugins import auth as _auth, settings as _settings
 from . import _error
 
 __author__ = 'Alexander Shepetko'
