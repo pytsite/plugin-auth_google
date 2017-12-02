@@ -1,6 +1,6 @@
 {
   "name": "auth_google",
-  "version": "1.1",
+  "version": "1.2",
   "description": {
     "en": "Google Sign In",
     "ru": "Google Sign In",

@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.2 (2017-12-02)
+
+Support for last `auth` plugin update.
+
+
 ### 1.1 (2017-12-02)
 
 - Support for PytSite-6.1.

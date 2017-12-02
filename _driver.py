@@ -63,7 +63,7 @@ class Auth(_auth.driver.Authentication):
             user = _auth.get_user(google_data.get('email'))
             is_new_user = False
 
-        except _auth.error.UserNotExist:
+        except _auth.error.UserNotFound:
             # Try to create new user
             if not _auth.is_sign_up_enabled():
                 raise _auth.error.AuthenticationError(_lang.t('auth_google@signup_is_disabled'))
