@@ -7,6 +7,12 @@ authentication driver.
 ## Changelog
 
 
+### 1.1 (2017-12-02)
+
+- Support for PytSite-6.1.
+- Part of the code moved to plugin `auth_ui_google`.
+
+
 ### 1.0 (2017-11-25)
 
 Support for PytSite-6.0.

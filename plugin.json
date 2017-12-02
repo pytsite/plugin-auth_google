@@ -1,6 +1,6 @@
 {
   "name": "auth_google",
-  "version": "1.0",
+  "version": "1.1",
   "description": {
     "en": "Google Sign In",
     "ru": "Google Sign In",
@@ -17,16 +17,9 @@
       "google-api-python-client"
     ],
     "plugins": [
-      "assetman",
       "auth",
-      "auth_http_api",
-      "form",
       "file",
-      "google",
-      "jquery",
-      "permissions",
-      "settings",
-      "widget"
+      "google"
     ]
   }
 }

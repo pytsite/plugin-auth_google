@@ -2,8 +2,8 @@
 """
 from typing import Union as _Union, List as _List
 from oauth2client import client as _oauth2_client
-from pytsite import router as _router
-from plugins import auth as _auth, settings as _settings
+from pytsite import router as _router, reg as _reg
+from plugins import auth as _auth
 from . import _error
 
 __author__ = 'Alexander Shepetko'
@@ -14,7 +14,7 @@ __license__ = 'MIT'
 def get_client_id():
     """Get client ID from settings
     """
-    client_id = _settings.get('auth_google.client_id')
+    client_id = _reg.get('auth_google.client_id')
     if not client_id:
         raise _error.ClientIdNotDefined()
 
@@ -24,7 +24,7 @@ def get_client_id():
 def get_client_secret():
     """Get client secret from settings
     """
-    client_secret = _settings.get('auth_google.client_secret')
+    client_secret = _reg.get('auth_google.client_secret')
     if not client_secret:
         raise _error.ClientSecretNotDefined()
 

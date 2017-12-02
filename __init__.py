@@ -1,6 +1,7 @@
 """PytSite Google Authentication Driver Plugin
 """
-from ._api import get_user_credentials
+from . import _error as error
+from ._api import get_client_id, get_authorization_url, get_client_secret, get_user_credentials, create_oauth2_flow
 
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
@@ -8,38 +9,15 @@ __license__ = 'MIT'
 
 
 def _init():
-    from pytsite import lang, router
-    from plugins import assetman, permissions, auth, settings
-    from . import _driver, _eh, _settings_form, _controllers
+    from pytsite import lang
+    from plugins import auth
+    from . import _driver
 
-    # Language resources
-    lang.register_package(__name__)
-    lang.register_global('auth_google_admin_settings_url', lambda language, args: settings.form_url('auth_google'))
-
-    # Assets
-    assetman.register_package(__name__)
-    assetman.t_less(__name__ + '@**')
-    assetman.t_js(__name__ + '@**')
-    assetman.js_module('auth-google-widget', __name__ + '@js/auth-google-widget')
-
-    # Permissions
-    permissions.define_permission('auth_google@manage_settings', 'auth_google@manage_auth_google_settings', 'app')
-
-    # Settings
-    settings.define('auth_google', _settings_form.Form, 'auth_google@auth_google', 'fa fa-google',
-                    'auth_google@manage_settings')
-
-    # Event handlers
-    router.on_dispatch(_eh.router_dispatch)
-
-    # Auth driver
-    client_id = settings.get('auth_google.client_id')
-    if client_id:
-        auth.register_auth_driver(_driver.Google(client_id))
-
-    # Routes
-    router.handle(_controllers.Authorization(), '/auth_google/authorization', 'auth_google@authorization',
-                  filters='auth_web@authorize')
+    try:
+        auth.register_auth_driver(_driver.Auth(get_client_id()))
+        lang.register_package(__name__)
+    except error.ClientIdNotDefined:
+        pass
 
 
 _init()
