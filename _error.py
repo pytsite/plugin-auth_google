@@ -1,20 +1,22 @@
 """PytSite Google Authentication Driver Plugin Errors
 """
-from plugins import auth as _auth
-
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
+from plugins import auth as _auth
+
 
 class ClientIdNotDefined(Exception):
     def __str__(self) -> str:
-        return 'Client ID is not defined'
+        return "You should set configuration parameter 'auth_google.client_id'. " \
+               "See details at https://developers.google.com/identity/sign-in/web/devconsole-project"
 
 
 class ClientSecretNotDefined(Exception):
     def __str__(self) -> str:
-        return 'Client secret is not defined'
+        return "You should set configuration parameter 'auth_google.client_secret'. " \
+               "See details at https://developers.google.com/identity/sign-in/web/devconsole-project"
 
 
 class UserCredentialsNotFound(Exception):

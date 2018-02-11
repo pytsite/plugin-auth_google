@@ -1,14 +1,14 @@
 """PytSite Google Authentication Driver Plugin API
 """
+__author__ = 'Alexander Shepetko'
+__email__ = 'a@shepetko.com'
+__license__ = 'MIT'
+
 from typing import Union as _Union, List as _List
 from oauth2client import client as _oauth2_client
 from pytsite import router as _router, reg as _reg
 from plugins import auth as _auth
 from . import _error
-
-__author__ = 'Alexander Shepetko'
-__email__ = 'a@shepetko.com'
-__license__ = 'MIT'
 
 
 def get_client_id():

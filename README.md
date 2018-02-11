@@ -7,6 +7,12 @@ authentication driver.
 ## Changelog
 
 
+### 1.4 (2018-02-11)
+
+- Support for PytSite-7.9.
+- Init code fixed.
+
+
 ### 1.3 (2017-12-13)
 
 Support for PytSite-7.0.

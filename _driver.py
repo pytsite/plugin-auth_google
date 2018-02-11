@@ -1,24 +1,16 @@
 """PytSite Google Authentication Driver Plugin
 """
-import requests as _requests
-from pytsite import lang as _lang
-from plugins import auth as _auth, file as _file
-
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
+import requests as _requests
+from pytsite import lang as _lang
+from plugins import auth as _auth, file as _file
+from . import _api, _error
+
 
 class Auth(_auth.driver.Authentication):
-    def __init__(self, client_id: str):
-        """Init
-        """
-        self._client_id = client_id
-
-        if not self._client_id:
-            raise RuntimeError("You should set configuration parameter 'auth.google.client_id'. " +
-                               "See details at https://developers.google.com/identity/sign-in/web/devconsole-project")
-
     def get_name(self) -> str:
         """Get name of the driver.
         """
@@ -30,8 +22,13 @@ class Auth(_auth.driver.Authentication):
         return 'Google'
 
     def sign_in(self, data: dict) -> _auth.model.AbstractUser:
-        """Authenticate user.
+        """Authenticate user
         """
+        try:
+            _api.get_client_id()
+        except _error.ClientIdNotDefined as e:
+            raise _auth.error.AuthenticationError(e)
+
         token = data.get('id_token')
 
         if not token:
