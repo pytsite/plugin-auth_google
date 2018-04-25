@@ -27,7 +27,7 @@ class Auth(_auth.driver.Authentication):
         try:
             _api.get_client_id()
         except _error.ClientIdNotDefined as e:
-            raise _auth.error.AuthenticationError(e)
+            raise _auth.error.AuthenticationError(str(e))
 
         token = data.get('id_token')
 

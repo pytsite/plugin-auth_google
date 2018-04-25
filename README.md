@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.4.1 (2018-04-25)
+
+Type casting.
+
+
 ### 1.4 (2018-02-11)
 
 - Support for PytSite-7.9.
