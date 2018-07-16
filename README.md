@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.4.2 (2018-07-16)
+
+`plugin.json` fixed.
+
+
 ### 1.4.1 (2018-04-25)
 
 Type casting.

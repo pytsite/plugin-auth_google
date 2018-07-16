@@ -1,6 +1,6 @@
 {
   "name": "auth_google",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": {
     "en": "Google Sign In",
     "ru": "Google Sign In",
@@ -15,7 +15,8 @@
   "requires": {
     "pytsite": ">=7.9",
     "packages": [
-      "google-api-python-client"
+      "google-api-python-client",
+      "oauth2client"
     ],
     "plugins": [
       "auth",
