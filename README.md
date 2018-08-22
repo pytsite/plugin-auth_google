@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.4.3 (2018-08-22)
+
+User's `full_name` usage replaced with `first_last_name`.
+
+
 ### 1.4.2 (2018-07-16)
 
 `plugin.json` fixed.

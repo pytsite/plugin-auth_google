@@ -89,7 +89,7 @@ class Auth(_auth.driver.Authentication):
 
         # Alter nickname
         if is_new_user:
-            user.nickname = user.full_name
+            user.nickname = user.first_last_name
 
         user.save()
 

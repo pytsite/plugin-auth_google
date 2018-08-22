@@ -1,6 +1,6 @@
 {
   "name": "auth_google",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": {
     "en": "Google Sign In",
     "ru": "Google Sign In",
@@ -19,7 +19,7 @@
       "oauth2client"
     ],
     "plugins": [
-      "auth",
+      "auth>=3.6",
       "file",
       "google"
     ]
