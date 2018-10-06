@@ -1,6 +1,6 @@
 {
   "name": "auth_google",
-  "version": "1.4.3",
+  "version": "2.0",
   "description": {
     "en": "Google Sign In",
     "ru": "Google Sign In",
@@ -8,20 +8,20 @@
   },
   "url": "https://github.com/pytsite/plugin-auth_google",
   "author": {
-    "name": "Alexander Shepetko",
+    "name": "Oleksandr Shepetko",
     "email": "a@shepetko.com",
     "url": "https://shepetko.com"
   },
   "requires": {
-    "pytsite": ">=7.9",
-    "packages": [
-      "google-api-python-client",
-      "oauth2client"
-    ],
-    "plugins": [
-      "auth>=3.6",
-      "file",
-      "google"
-    ]
+    "pytsite": "8.x",
+    "packages": {
+      "google-api-python-client": "1.x",
+      "oauth2client": "4.x"
+    },
+    "plugins": {
+      "auth": "3.x",
+      "file": "1.x",
+      "google": "2.x"
+    }
   }
 }
