@@ -1,6 +1,6 @@
 {
   "name": "auth_google",
-  "version": "2.0",
+  "version": "2.1",
   "description": {
     "en": "Google Sign In",
     "ru": "Google Sign In",
@@ -13,7 +13,7 @@
     "url": "https://shepetko.com"
   },
   "requires": {
-    "pytsite": "8.x",
+    "pytsite": ">=9.0",
     "packages": {
       "google-api-python-client": "1.x",
       "oauth2client": "4.x"

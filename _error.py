@@ -4,7 +4,7 @@ __author__ = 'Oleksandr Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
-from plugins import auth as _auth
+from plugins import auth
 
 
 class ClientIdNotDefined(Exception):
@@ -20,7 +20,7 @@ class ClientSecretNotDefined(Exception):
 
 
 class UserCredentialsNotFound(Exception):
-    def __init__(self, user: _auth.model.AbstractUser):
+    def __init__(self, user: auth.model.AbstractUser):
         self._user = user
         super().__init__()
 

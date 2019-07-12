@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 2.1 (2019-07-12)
+
+Support of `pytsite-9.0`.
+
+
 ### 2.0 (2018-10-06)
 
 Support of `pytsite-8.x`.
